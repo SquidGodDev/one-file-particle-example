@@ -121,14 +121,14 @@ local previous_time = nil
 function pd.update()
     -- Delta time calculation
     local dt = 0.033
-	local current_time <const> = getCurTimeMil()
-	if previous_time ~= nil then
-		dt = (current_time - previous_time) / 1000.0
-	end
-	previous_time = current_time
+    local current_time <const> = getCurTimeMil()
+    if previous_time ~= nil then
+        dt = (current_time - previous_time) / 1000.0
+    end
+    previous_time = current_time
 
     -- Draw
     clear()
     updateParticles(dt)
-	drawFPS(0,0)
+    drawFPS(0,0)
 end
